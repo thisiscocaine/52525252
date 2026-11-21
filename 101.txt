@@ -1,0 +1,504 @@
+export BUNDLE_BIN="$USER_GEM_DIR/bin/bundle"
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ 
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ export PATH="$USER_GEM_DIR/bin:$PATH"
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ 
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ echo "BUNDLE_BIN=$BUNDLE_BIN"
+BUNDLE_BIN=/home/arisksec/.local/share/gem/ruby/3.3.0/bin/bundle
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ timeout 10s "$BUNDLE_BIN" --version
+4.1.0
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ 
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ echo "BUNDLE_EXIT=$?"
+BUNDLE_EXIT=0
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ cd ~/mruby-engine-race || exit 1
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ 
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ ruby "$BUNDLE_BIN" install --jobs 4 --retry 3
+Fetching gem metadata from https://rubygems.org/...........
+Local specification for pry-0.16.0 has different dependencies than the remote gem, ignoring it
+Resolving dependencies...
+Fetching abbrev 0.1.2
+Fetching bigdecimal 4.1.3
+Fetching benchmark-ips 2.15.1
+Fetching io-console 0.9.5
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/abbrev-0.1.2.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/benchmark-ips-2.15.1.gem`. It is likely that you need to grant write permissions for that path.                                                                        
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/io-console-0.9.5.gem`. It is likely that you need to grant write permissions for that path.                                                                            
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/bigdecimal-4.1.3.gem`. It is likely that you need to grant write permissions for that path.                                                                            
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/benchmark-ips-2.15.1.gem`. It is likely that you need to grant write permissions for that path.                                                                        
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/io-console-0.9.5.gem`. It is likely that you need to grant write permissions for that path.                                                                            
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/bigdecimal-4.1.3.gem`. It is likely that you need to grant write permissions for that path.                                                                            
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/abbrev-0.1.2.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/benchmark-ips-2.15.1.gem`. It is likely that you need to grant write permissions for that path.                                                                        
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/bigdecimal-4.1.3.gem`. It is likely that you need to grant write permissions for that path.                                                                            
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/abbrev-0.1.2.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/io-console-0.9.5.gem`. It is likely that you need to grant write permissions for that path.                                                                            
+
+Fetching reline 0.7.0
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/reline-0.7.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Fetching byebug 13.0.0
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/byebug-13.0.0.gem`. It is likely that you need to grant write permissions for that path.                                                                               
+
+Fetching coderay 1.1.3
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/coderay-1.1.3.gem`. It is likely that you need to grant write permissions for that path.                                                                               
+
+Fetching diff-lcs 1.6.2
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/diff-lcs-1.6.2.gem`. It is likely that you need to grant write permissions for that path.                                                                              
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/reline-0.7.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/byebug-13.0.0.gem`. It is likely that you need to grant write permissions for that path.                                                                               
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/coderay-1.1.3.gem`. It is likely that you need to grant write permissions for that path.                                                                               
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/diff-lcs-1.6.2.gem`. It is likely that you need to grant write permissions for that path.                                                                              
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/reline-0.7.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/byebug-13.0.0.gem`. It is likely that you need to grant write permissions for that path.                                                                               
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/coderay-1.1.3.gem`. It is likely that you need to grant write permissions for that path.                                                                               
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/diff-lcs-1.6.2.gem`. It is likely that you need to grant write permissions for that path.                                                                              
+
+Fetching domain_name 0.7.20261117
+
+Fetching getoptlong 0.2.1
+
+Fetching highline 2.1.0
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/domain_name-0.7.20261117.gem`. It is likely that you need to grant write permissions for that path.                                                                    
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/getoptlong-0.2.1.gem`. It is likely that you need to grant write permissions for that path.                                                                            
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/highline-2.1.0.gem`. It is likely that you need to grant write permissions for that path.                                                                              
+
+Fetching http-accept 1.7.0
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/http-accept-1.7.0.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/getoptlong-0.2.1.gem`. It is likely that you need to grant write permissions for that path.                                                                            
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/domain_name-0.7.20261117.gem`. It is likely that you need to grant write permissions for that path.                                                                    
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/highline-2.1.0.gem`. It is likely that you need to grant write permissions for that path.                                                                              
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/http-accept-1.7.0.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/highline-2.1.0.gem`. It is likely that you need to grant write permissions for that path.                                                                              
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/getoptlong-0.2.1.gem`. It is likely that you need to grant write permissions for that path.                                                                            
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/domain_name-0.7.20261117.gem`. It is likely that you need to grant write permissions for that path.                                                                    
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/http-accept-1.7.0.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+
+Fetching json 2.21.2
+Fetching logger 1.7.0
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/logger-1.7.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Fetching mime-types-data 3.2026.1103
+
+Fetching netrc 0.11.0
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/json-2.21.2.gem`. It is likely that you need to grant write permissions for that path.                                                                                 
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/netrc-0.11.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/mime-types-data-3.2026.1103.gem`. It is likely that you need to grant write permissions for that path.                                                                 
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/logger-1.7.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/netrc-0.11.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/json-2.21.2.gem`. It is likely that you need to grant write permissions for that path.                                                                                 
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/mime-types-data-3.2026.1103.gem`. It is likely that you need to grant write permissions for that path.                                                                 
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/json-2.21.2.gem`. It is likely that you need to grant write permissions for that path.                                                                                 
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/logger-1.7.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/netrc-0.11.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/mime-types-data-3.2026.1103.gem`. It is likely that you need to grant write permissions for that path.                                                                 
+
+Fetching rainbow 2.2.2
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rainbow-2.2.2.gem`. It is likely that you need to grant write permissions for that path.                                                                               
+
+Fetching rest-client 2.1.0
+
+Fetching thor 1.5.0
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rest-client-2.1.0.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/thor-1.5.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                  
+
+Fetching package_cloud 0.3.15
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/package_cloud-0.3.15.gem`. It is likely that you need to grant write permissions for that path.                                                                        
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/package_cloud-0.3.15.gem`. It is likely that you need to grant write permissions for that path.                                                                        
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/thor-1.5.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                  
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rainbow-2.2.2.gem`. It is likely that you need to grant write permissions for that path.                                                                               
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rest-client-2.1.0.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/package_cloud-0.3.15.gem`. It is likely that you need to grant write permissions for that path.                                                                        
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/thor-1.5.0.gem`. It is likely that you need to grant write permissions for that path.                                                                                  
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rainbow-2.2.2.gem`. It is likely that you need to grant write permissions for that path.                                                                               
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rest-client-2.1.0.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Fetching pry 0.16.1
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/pry-0.16.1.gem`. It is likely that you need to grant write permissions for that path.                                                                                  
+
+Fetching pry-byebug 3.12.0
+
+Fetching rake-compiler 1.3.3
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/pry-byebug-3.12.0.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rake-compiler-1.3.3.gem`. It is likely that you need to grant write permissions for that path.                                                                         
+
+Fetching rspec-support 3.13.8
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-support-3.13.8.gem`. It is likely that you need to grant write permissions for that path.                                                                        
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/pry-byebug-3.12.0.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/pry-0.16.1.gem`. It is likely that you need to grant write permissions for that path.                                                                                  
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rake-compiler-1.3.3.gem`. It is likely that you need to grant write permissions for that path.                                                                         
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-support-3.13.8.gem`. It is likely that you need to grant write permissions for that path.                                                                        
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/pry-0.16.1.gem`. It is likely that you need to grant write permissions for that path.                                                                                  
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/pry-byebug-3.12.0.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rake-compiler-1.3.3.gem`. It is likely that you need to grant write permissions for that path.                                                                         
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-support-3.13.8.gem`. It is likely that you need to grant write permissions for that path.                                                                        
+
+Fetching rspec-core 3.13.7
+
+Fetching rspec-expectations 3.13.6
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-core-3.13.7.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Fetching rspec-mocks 3.13.9
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-expectations-3.13.6.gem`. It is likely that you need to grant write permissions for that path.                                                                   
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-mocks-3.13.9.gem`. It is likely that you need to grant write permissions for that path.                                                                          
+
+Fetching rspec 3.13.2
+
+Retrying download gem from https://rubygems.org/ due to error (2/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-3.13.2.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-expectations-3.13.6.gem`. It is likely that you need to grant write permissions for that path.                                                                   
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-mocks-3.13.9.gem`. It is likely that you need to grant write permissions for that path.                                                                          
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-3.13.2.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (3/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-core-3.13.7.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-3.13.2.gem`. It is likely that you need to grant write permissions for that path.                                                                                
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-expectations-3.13.6.gem`. It is likely that you need to grant write permissions for that path.                                                                   
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-mocks-3.13.9.gem`. It is likely that you need to grant write permissions for that path.                                                                          
+
+Retrying download gem from https://rubygems.org/ due to error (4/4): Bundler::PermissionError There was an error while trying to write to `/var/lib/gems/3.3.0/cache/rspec-core-3.13.7.gem`. It is likely that you need to grant write permissions for that path.                                                                           
+
+
+
+
+Bundler::PermissionError: There was an error while trying to write to `/var/lib/gems/3.3.0/cache/abbrev-0.1.2.gem`. It is likely that you need to grant write
+permissions for that path.                                                                                                                                            
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/shared_helpers.rb:111:in `rescue in filesystem_access'                                    
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/shared_helpers.rb:105:in `filesystem_access'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/rubygems_integration.rb:395:in `block in download_gem'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/retry.rb:48:in `run'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/retry.rb:38:in `attempt'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/rubygems_integration.rb:387:in `download_gem'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:574:in `block in download_gem'
+  /usr/lib/ruby/vendor_ruby/rubygems.rb:1053:in `time'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:573:in `download_gem'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:502:in `fetch_gem'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:472:in `fetch_gem_if_possible'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:618:in `rubygems_gem_installer'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:186:in `download'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/installer/gem_installer.rb:29:in `download'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/installer/parallel_installer.rb:192:in `do_download'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/installer/parallel_installer.rb:173:in `block in download_worker_pool'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/worker.rb:71:in `apply_func'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/worker.rb:66:in `block in process_queue'
+  <internal:kernel>:187:in `loop'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/worker.rb:57:in `process_queue'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/worker.rb:103:in `block (2 levels) in create_threads'
+
+An error occurred while installing abbrev (0.1.2), and Bundler cannot continue.
+
+In Gemfile:
+  package_cloud was resolved to 0.3.15, which depends on
+    abbrev
+
+
+Bundler::PermissionError: There was an error while trying to write to `/var/lib/gems/3.3.0/cache/benchmark-ips-2.15.1.gem`. It is likely that you need to grant write
+permissions for that path.
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/shared_helpers.rb:111:in `rescue in filesystem_access'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/shared_helpers.rb:105:in `filesystem_access'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/rubygems_integration.rb:395:in `block in download_gem'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/retry.rb:48:in `run'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/retry.rb:38:in `attempt'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/rubygems_integration.rb:387:in `download_gem'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:574:in `block in download_gem'
+  /usr/lib/ruby/vendor_ruby/rubygems.rb:1053:in `time'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:573:in `download_gem'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:502:in `fetch_gem'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:472:in `fetch_gem_if_possible'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:618:in `rubygems_gem_installer'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/source/rubygems.rb:186:in `download'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/installer/gem_installer.rb:29:in `download'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/installer/parallel_installer.rb:192:in `do_download'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/installer/parallel_installer.rb:173:in `block in download_worker_pool'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/worker.rb:71:in `apply_func'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/worker.rb:66:in `block in process_queue'
+  <internal:kernel>:187:in `loop'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/worker.rb:57:in `process_queue'
+  /home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/bundler/worker.rb:103:in `block (2 levels) in create_threads'
+
+An error occurred while installing benchmark-ips (2.15.1), and Bundler cannot continue.
+
+In Gemfile:
+  benchmark-ips
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ ruby "$BUNDLE_BIN" check
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/version.rb:3: warning: already initialized constant Gem::URI::VERSION
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/version.rb:3: warning: previous definition of VERSION was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/version.rb:4: warning: already initialized constant Gem::URI::VERSION_CODE
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/version.rb:4: warning: previous definition of VERSION_CODE was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:28: warning: already initialized constant Gem::URI::RFC2396_REGEXP::PATTERN::ALPHA
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:28: warning: previous definition of ALPHA was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:30: warning: already initialized constant Gem::URI::RFC2396_REGEXP::PATTERN::ALNUM
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:30: warning: previous definition of ALNUM was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:34: warning: already initialized constant Gem::URI::RFC2396_REGEXP::PATTERN::HEX
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:34: warning: previous definition of HEX was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:36: warning: already initialized constant Gem::URI::RFC2396_REGEXP::PATTERN::ESCAPED
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:36: warning: previous definition of ESCAPED was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:40: warning: already initialized constant Gem::URI::RFC2396_REGEXP::PATTERN::UNRESERVED
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:40: warning: previous definition of UNRESERVED was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:45: warning: already initialized constant Gem::URI::RFC2396_REGEXP::PATTERN::RESERVED
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:45: warning: previous definition of RESERVED was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:48: warning: already initialized constant Gem::URI::RFC2396_REGEXP::PATTERN::DOMLABEL
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:48: warning: previous definition of DOMLABEL was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:50: warning: already initialized constant Gem::URI::RFC2396_REGEXP::PATTERN::TOPLABEL
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:50: warning: previous definition of TOPLABEL was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:52: warning: already initialized constant Gem::URI::RFC2396_REGEXP::PATTERN::HOSTNAME
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:52: warning: previous definition of HOSTNAME was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:323: warning: already initialized constant Gem::URI::RFC2396_Parser::TO_S
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc2396_parser.rb:323: warning: previous definition of TO_S was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:5: warning: already initialized constant Gem::URI::RFC3986_Parser::HOST
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:5: warning: previous definition of HOST was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:28: warning: already initialized constant Gem::URI::RFC3986_Parser::USERINFO
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:28: warning: previous definition of USERINFO was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:30: warning: already initialized constant Gem::URI::RFC3986_Parser::SCHEME
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:30: warning: previous definition of SCHEME was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:31: warning: already initialized constant Gem::URI::RFC3986_Parser::SEG
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:31: warning: previous definition of SEG was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:32: warning: already initialized constant Gem::URI::RFC3986_Parser::SEG_NC
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:32: warning: previous definition of SEG_NC was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:33: warning: already initialized constant Gem::URI::RFC3986_Parser::FRAGMENT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:33: warning: previous definition of FRAGMENT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:35: warning: already initialized constant Gem::URI::RFC3986_Parser::RFC3986_URI
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:35: warning: previous definition of RFC3986_URI was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:54: warning: already initialized constant Gem::URI::RFC3986_Parser::RFC3986_relative_ref
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/rfc3986_parser.rb:54: warning: previous definition of RFC3986_relative_ref was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:17: warning: already initialized constant Gem::URI::RFC2396_PARSER
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:17: warning: previous definition of RFC2396_PARSER was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:21: warning: already initialized constant Gem::URI::RFC3986_PARSER
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:21: warning: previous definition of RFC3986_PARSER was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:25: warning: already initialized constant Gem::URI::DEFAULT_PARSER
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:25: warning: previous definition of DEFAULT_PARSER was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:99: warning: already initialized constant Module::ReservedChars
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:99: warning: previous definition of ReservedChars was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:100: warning: already initialized constant Module::EscapedChars
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:100: warning: previous definition of EscapedChars was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:166: warning: already initialized constant Gem::URI::INITIAL_SCHEMES
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:166: warning: previous definition of INITIAL_SCHEMES was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:343: warning: already initialized constant Gem::URI::TBLENCWWWCOMP_
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:343: warning: previous definition of TBLENCWWWCOMP_ was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:347: warning: already initialized constant Gem::URI::TBLENCURICOMP_
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:347: warning: previous definition of TBLENCURICOMP_ was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:350: warning: already initialized constant Gem::URI::TBLDECWWWCOMP_
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:350: warning: previous definition of TBLDECWWWCOMP_ was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:678: warning: already initialized constant Gem::URI::WEB_ENCODINGS_
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:678: warning: previous definition of WEB_ENCODINGS_ was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/generic.rb:27: warning: already initialized constant Gem::URI::Generic::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/generic.rb:27: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/generic.rb:46: warning: already initialized constant Gem::URI::Generic::COMPONENT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/generic.rb:46: warning: previous definition of COMPONENT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/generic.rb:61: warning: already initialized constant Gem::URI::Generic::USE_REGISTRY
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/generic.rb:61: warning: previous definition of USE_REGISTRY was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/file.rb:12: warning: already initialized constant Gem::URI::File::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/file.rb:12: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/file.rb:17: warning: already initialized constant Gem::URI::File::COMPONENT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/file.rb:17: warning: previous definition of COMPONENT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:123: warning: already initialized constant Gem::URI::Schemes::FILE
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:123: warning: previous definition of FILE was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ftp.rb:24: warning: already initialized constant Gem::URI::FTP::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ftp.rb:24: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ftp.rb:29: warning: already initialized constant Gem::URI::FTP::COMPONENT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ftp.rb:29: warning: previous definition of COMPONENT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ftp.rb:42: warning: already initialized constant Gem::URI::FTP::TYPECODE
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ftp.rb:42: warning: previous definition of TYPECODE was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ftp.rb:45: warning: already initialized constant Gem::URI::FTP::TYPECODE_PREFIX
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ftp.rb:45: warning: previous definition of TYPECODE_PREFIX was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:123: warning: already initialized constant Gem::URI::Schemes::FTP
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:123: warning: previous definition of FTP was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/http.rb:24: warning: already initialized constant Gem::URI::HTTP::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/http.rb:24: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/http.rb:27: warning: already initialized constant Gem::URI::HTTP::COMPONENT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/http.rb:27: warning: previous definition of COMPONENT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:123: warning: already initialized constant Gem::URI::Schemes::HTTP
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:123: warning: previous definition of HTTP was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/https.rb:19: warning: already initialized constant Gem::URI::HTTPS::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/https.rb:19: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:123: warning: already initialized constant Gem::URI::Schemes::HTTPS
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:123: warning: previous definition of HTTPS was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ldap.rb:26: warning: already initialized constant Gem::URI::LDAP::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ldap.rb:26: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ldap.rb:29: warning: already initialized constant Gem::URI::LDAP::COMPONENT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ldap.rb:29: warning: previous definition of COMPONENT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ldap.rb:47: warning: already initialized constant Gem::URI::LDAP::SCOPE_ONE
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ldap.rb:47: warning: previous definition of SCOPE_ONE was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ldap.rb:48: warning: already initialized constant Gem::URI::LDAP::SCOPE_SUB
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ldap.rb:48: warning: previous definition of SCOPE_SUB was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ldap.rb:49: warning: already initialized constant Gem::URI::LDAP::SCOPE_BASE
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ldap.rb:49: warning: previous definition of SCOPE_BASE was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ldap.rb:46: warning: already initialized constant Gem::URI::LDAP::SCOPE
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ldap.rb:46: warning: previous definition of SCOPE was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:123: warning: already initialized constant Gem::URI::Schemes::LDAP
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:123: warning: previous definition of LDAP was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ldaps.rb:18: warning: already initialized constant Gem::URI::LDAPS::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ldaps.rb:18: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:123: warning: already initialized constant Gem::URI::Schemes::LDAPS
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:123: warning: previous definition of LDAPS was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/mailto.rb:21: warning: already initialized constant Gem::URI::MailTo::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/mailto.rb:21: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/mailto.rb:24: warning: already initialized constant Gem::URI::MailTo::COMPONENT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/mailto.rb:24: warning: previous definition of COMPONENT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/mailto.rb:52: warning: already initialized constant Gem::URI::MailTo::HEADER_REGEXP
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/mailto.rb:52: warning: previous definition of HEADER_REGEXP was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/mailto.rb:55: warning: already initialized constant Gem::URI::MailTo::EMAIL_REGEXP
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/mailto.rb:55: warning: previous definition of EMAIL_REGEXP was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:123: warning: already initialized constant Gem::URI::Schemes::MAILTO
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:123: warning: previous definition of MAILTO was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ws.rb:24: warning: already initialized constant Gem::URI::WS::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ws.rb:24: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/ws.rb:27: warning: already initialized constant Gem::URI::WS::COMPONENT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/ws.rb:27: warning: previous definition of COMPONENT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:123: warning: already initialized constant Gem::URI::Schemes::WS
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:123: warning: previous definition of WS was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/wss.rb:19: warning: already initialized constant Gem::URI::WSS::DEFAULT_PORT
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/wss.rb:19: warning: previous definition of DEFAULT_PORT was here
+/usr/lib/ruby/vendor_ruby/rubygems/vendor/uri/lib/uri/common.rb:123: warning: already initialized constant Gem::URI::Schemes::WSS
+/home/arisksec/.local/share/gem/ruby/3.3.0/gems/bundler-4.1.0/lib/rubygems/vendor/uri/lib/uri/common.rb:123: warning: previous definition of WSS was here
+Fetching gem metadata from https://rubygems.org/...........
+Local specification for pry-0.16.0 has different dependencies than the remote gem, ignoring it
+Resolving dependencies...
+The following gems are missing
+ * bigdecimal (4.1.3)
+ * rake-compiler (1.3.3)
+ * rspec (3.13.2)
+ * pry (0.16.1)
+ * pry-byebug (3.12.0)
+ * benchmark-ips (2.15.1)
+ * package_cloud (0.3.15)
+ * rspec-core (3.13.7)
+ * rspec-expectations (3.13.6)
+ * rspec-mocks (3.13.9)
+ * reline (0.7.0)
+ * byebug (13.0.0)
+ * highline (2.1.0)
+ * json (2.21.2)
+ * rainbow (2.2.2)
+ * rest-client (2.1.0)
+ * thor (1.5.0)
+ * rspec-support (3.13.8)
+ * diff-lcs (1.6.2)
+ * io-console (0.9.5)
+ * http-accept (1.7.0)
+ * netrc (0.11.0)
+ * domain_name (0.7.20261117)
+ * logger (1.7.0)
+ * mime-types-data (3.2026.1103)
+Install missing gems with `bundle install`
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ ruby "$BUNDLE_BIN" exec rake compile
+Could not find gem 'rake-compiler (>= 1.2)' in locally installed gems.
+Run `bundle install` to install missing gems.                                                                                                                         
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ echo "BUILD_EXIT=$?"
+BUILD_EXIT=7
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ MODE=inject timeout 15s \
+> ruby "$BUNDLE_BIN" exec ruby ./mruby_race_poc.rb
+Could not find gem 'rake-compiler (>= 1.2)' in locally installed gems.
+Run `bundle install` to install missing gems.                                                                                                                         
+
+┌──(arisksec㉿arisksec)-[~/mruby-engine-race]
+└─$ MODE=eval timeout 15s \
+> ruby "$BUNDLE_BIN" exec ruby ./mruby_race_poc.rb
+Could not find gem 'rake-compiler (>= 1.2)' in locally installed gems.
+Run `bundle install` to install missing gems.                                                                                                      
